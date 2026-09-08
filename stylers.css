@@ -1,0 +1,200 @@
+/*
+Water-Inspired Color Palette
+
+#F0F8FF - Ice Blue (page background)
+#FFFFFF - White (boxes and header)
+#164E63 - Deep Ocean Blue (headings)
+#334155 - Dark Slate (normal text)
+#B6DCE8 - Mist Blue (borders)
+#2563A6 - Ocean Blue (paragraph 1)
+#168C8C - Teal (paragraph 2)
+#2E8B72 - Sea Green (paragraph 3)
+#CDEFF2 - Light Aqua (table heading)
+#0077B6 - Bright Ocean Blue (navigation links)
+*/
+
+
+/* Styles the entire page */
+body {
+    background-color: #F0F8FF;
+    margin: 30px;
+    font-family: Arial, sans-serif;
+    color: #334155;
+}
+
+
+/* Styles the header box at the top */
+header {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #B6DCE8;
+    margin-bottom: 25px;
+}
+
+
+/* Styles the main heading */
+h1 {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: #164E63;
+    margin: 0;
+}
+
+
+/* Styles the image */
+img {
+    display: block;
+    width: 45%;
+    max-width: 900px;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+
+.logo {
+    width: 60px;
+    height: auto;
+}
+
+
+/* First paragraph box */
+.p1 {
+    font-family: Arial;
+    color: #2563A6;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+/* Second paragraph box */
+.p2 {
+    font-family: Georgia, serif;
+    color: #168C8C;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+
+/* Third paragraph box */
+.p3 {
+    font-family: "Comic Sans MS", cursive;
+    color: #2E8B72;
+    font-size: 17px;
+}
+
+.p-underlined {
+    border-bottom: 1px solid #B6DCE8;
+    padding-bottom: 15px;
+}
+
+/* Creates one box around the image and all three paragraphs */
+.box {
+    background-color: #ffffff;
+    border: 1px solid #B6DCE8;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+}
+
+.box-smaller {
+    background-color: #ffffff;
+    border: 1px solid #B6DCE8;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 40%;
+}
+
+/* Styles the smaller headings */
+h2 {
+    font-family: Arial, sans-serif;
+    color: #164E63;
+}
+
+.center-h2 {
+    text-align: center;
+}
+
+
+/* Styles the bulleted list */
+ul {
+    font-family: Arial, sans-serif;
+    color: #334155;
+
+    background-color: #ffffff;
+    padding: 20px 20px 20px 40px;
+    border: 1px solid #B6DCE8;
+    border-radius: 8px;
+    width: 10%;
+}
+
+
+/* Styles the table */
+table {
+    border-collapse: collapse;
+    width: 35%;
+    margin-top: 15px;
+    font-family: Arial, sans-serif;
+    background-color: #FFFFFF;
+}
+
+
+/* Styles each table cell */
+th,
+td {
+    border: 1px solid #B6DCE8;
+    padding: 10px;
+    text-align: center;
+}
+
+
+/* Styles the top row of the table */
+th {
+    background-color: #CDEFF2;
+}
+
+
+/* Styles the navigation area */
+nav {
+    background-color: #ffffff;
+    padding: 15px;
+    border: 1px solid #B6DCE8;
+    border-radius: 5px;
+
+    text-align: center;
+    margin-top: 25px;
+    width: 70%px;
+
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+/* Styles the navigation links */
+nav a {
+    color: #0077B6;;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+}
+
+
+/* Changes link appearance when mouse is over it */
+nav a:hover {
+    text-decoration: underline;
+}
+
+.grid-2col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+}
