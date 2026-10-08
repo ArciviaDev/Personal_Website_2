@@ -1,48 +1,61 @@
-/*
-Water-Inspired Color Palette
 
-#F0F8FF - Ice Blue (page background)
-#FFFFFF - White (boxes and header)
-#164E63 - Deep Ocean Blue (headings)
-#334155 - Dark Slate (normal text)
-#B6DCE8 - Mist Blue (borders)
-#2563A6 - Ocean Blue (paragraph 1)
-#168C8C - Teal (paragraph 2)
-#2E8B72 - Sea Green (paragraph 3)
-#CDEFF2 - Light Aqua (table heading)
-#0077B6 - Bright Ocean Blue (navigation links)
-*/
+/* ==========================================================
+    1. WATER-INSPIRED COLOR PALETTE
+    ==========================================================
 
-/* Custom Properties for colors*/
+    #F0F8FF - Ice Blue (page background)
+    #FFFFFF - White (boxes and header)
+    #164E63 - Deep Ocean Blue (headings)
+    #334155 - Dark Slate (normal text)
+    #B6DCE8 - Mist Blue (borders)
+    #2563A6 - Ocean Blue (paragraph 1)
+    #168C8C - Teal (paragraph 2)
+    #2E8B72 - Sea Green (paragraph 3)
+    #CDEFF2 - Light Aqua (table heading)
+    #0077B6 - Bright Ocean Blue (navigation links)
+
+   ========================================================== */
+
+
+/* Custom properties for the website's default colors */
 :root {
-    --ice-age:          #F0F8FF;
-    --white:            #FFFFFF;
-    --deep-ocean:       #164E63;
-    --dark-slate:       #334155;
-    --mist-blue:        #B6DCE8;
-    --ocean-blue:       #2563A6;
-    --teal:             #168C8C;
-    --sea-green:        #2E8B72;
-    --light-aqua:       #CDEFF2;
-    --bright-ocean-blue:#0077B6;
+    --ice-age:           #F0F8FF;
+    --white:             #FFFFFF;
+    --deep-ocean:        #164E63;
+    --dark-slate:        #334155;
+    --mist-blue:         #B6DCE8;
+    --ocean-blue:        #2563A6;
+    --teal:              #168C8C;
+    --sea-green:         #2E8B72;
+    --light-aqua:        #CDEFF2;
+    --bright-ocean-blue: #0077B6;
 }
 
-/* Overrides the color variables when dark mode is enabled */
+
+/* ==========================================================
+    2. DARK MODE COLORS
+   ========================================================== */
+
+/* Overrides the default color variables when dark mode is enabled */
 body.dark_mode {
-    --ice-age:            #0F172A;
-    --white:              #1E293B;
-    --deep-ocean:         #BAE6FD;
-    --dark-slate:         #E2E8F0;
-    --mist-blue:          #475569;
-    --ocean-blue:         #93C5FD;
-    --teal:               #5EEAD4;
-    --sea-green:          #86EFAC;
-    --light-aqua:         #164E63;
-    --bright-ocean-blue:  #7DD3FC;
+    --ice-age:           #0F172A;
+    --white:             #1E293B;
+    --deep-ocean:        #BAE6FD;
+    --dark-slate:        #E2E8F0;
+    --mist-blue:         #475569;
+    --ocean-blue:        #93C5FD;
+    --teal:              #5EEAD4;
+    --sea-green:         #86EFAC;
+    --light-aqua:        #164E63;
+    --bright-ocean-blue: #7DD3FC;
 }
 
 
-/* Styles the entire page */
+/* ==========================================================
+    3. GENERAL PAGE STYLING
+   ========================================================== */
+
+/* Styles the entire webpage */
 body {
     background-color: var(--ice-age);
     margin: 30px;
@@ -51,7 +64,11 @@ body {
 }
 
 
-/* Styles the header box at the top */
+/* ==========================================================
+    4. HEADER, IMAGES, AND LOGOS
+   ========================================================== */
+
+/* Styles the header box at the top of the page */
 header {
     background-color: var(--white);
     padding: 20px;
@@ -60,6 +77,33 @@ header {
     margin-bottom: 25px;
 }
 
+/* Styles images throughout the website */
+img {
+    display: block;
+    width: 45%;
+    max-width: 900px;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+/* Aligns the header content horizontally and centers it */
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Sets the size of images used as logos */
+.logo {
+    width: 60px;
+    height: auto;
+}
+
+
+/* ==========================================================
+    5. HEADINGS AND PARAGRAPHS
+   ========================================================== */
 
 /* Styles the main heading */
 h1 {
@@ -69,31 +113,18 @@ h1 {
     margin: 0;
 }
 
-
-/* Styles the image */
-img {
-    display: block;
-    width: 45%;
-    max-width: 900px;
-    margin: 20px auto;
-    border-radius: 10px;
+/* Styles smaller headings */
+h2 {
+    font-family: Arial, sans-serif;
+    color: var(--deep-ocean);
 }
 
-.header-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
+/* Centers headings that use the center-h2 class */
+.center-h2 {
+    text-align: center;
 }
 
-
-.logo {
-    width: 60px;
-    height: auto;
-}
-
-
-/* First paragraph box */
+/* Styles the first paragraph */
 .p1 {
     font-family: Arial;
     color: var(--ocean-blue);
@@ -101,8 +132,7 @@ img {
     font-weight: bold;
 }
 
-
-/* Second paragraph box */
+/* Styles the second paragraph */
 .p2 {
     font-family: Georgia, serif;
     color: var(--teal);
@@ -110,20 +140,25 @@ img {
     line-height: 1.7;
 }
 
-
-/* Third paragraph box */
+/* Styles the third paragraph */
 .p3 {
     font-family: "Comic Sans MS", cursive;
     color: var(--sea-green);
     font-size: 17px;
 }
 
+/* Adds a bottom border beneath selected paragraphs */
 .p-underlined {
     border-bottom: 1px solid var(--mist-blue);
     padding-bottom: 15px;
 }
 
-/* Creates one box around the image and all three paragraphs */
+
+/* ==========================================================
+    6. CONTENT BOXES AND PAGE LAYOUTS
+   ========================================================== */
+
+/* Creates a box around the image and paragraphs */
 .box {
     background-color: var(--white);
     border: 1px solid var(--mist-blue);
@@ -133,6 +168,7 @@ img {
     width: 80%;
 }
 
+/* Creates a smaller content box for the About Me page */
 .box-smaller {
     background-color: var(--white);
     border: 1px solid var(--mist-blue);
@@ -142,8 +178,8 @@ img {
     width: 40%;
 }
 
-/* Places the boxes side by side in about me page 
-    while keeping the layout centered*/
+/* Places the About Me content boxes side by side
+   while keeping the layout centered */
 .about-me-layout {
     display: flex;
     justify-content: center;
@@ -151,8 +187,7 @@ img {
     gap: 20px;
 }
 
-/* Holds the two boxes on the right.
-    boxes are layered vertically in contrast to box-smaller which is horizontally aligned. */
+/* Holds the two right-side boxes in a vertical layout */
 .right-boxes {
     display: flex;
     flex-direction: column;
@@ -161,7 +196,7 @@ img {
     margin: 20px 0;
 }
 
-/* Styles the 2 right-side boxes */
+/* Styles the two boxes on the right side of the About Me page */
 .right-box {
     background-color: var(--white);
     border: 1px solid var(--mist-blue);
@@ -170,18 +205,21 @@ img {
     flex: 1;
 }
 
-/* Styles the smaller headings */
-h2 {
-    font-family: Arial, sans-serif;
-    color: var(--deep-ocean);
+/* Creates a two-column grid on the Home page
+   to position paragraphs and images side by side */
+.grid-2col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
 }
 
-.center-h2 {
-    text-align: center;
-}
 
+/* ==========================================================
+    7. LISTS AND TABLES
+   ========================================================== */
 
-/* Styles the bulleted list */
+/* Styles bulleted lists throughout the website */
 ul {
     font-family: Arial, sans-serif;
     color: var(--dark-slate);
@@ -193,7 +231,7 @@ ul {
     width: 15%;
 }
 
-/* Styles the goal box in About Me page */
+/* Styles the Goals list inside the About Me page */
 .ul-goals {
     font-family: "Comic Sans MS", cursive;
     color: var(--dark-slate);
@@ -207,8 +245,7 @@ ul {
     align-items: center;
 }
 
-
-/* Styles the table */
+/* Styles the table's overall appearance */
 table {
     border-collapse: collapse;
     width: 35%;
@@ -217,8 +254,7 @@ table {
     background-color: var(--white);
 }
 
-
-/* Styles each table cell */
+/* Styles individual table header and data cells */
 th,
 td {
     border: 1px solid var(--mist-blue);
@@ -226,14 +262,17 @@ td {
     text-align: center;
 }
 
-
-/* Styles the top row of the table */
+/* Styles the table's header row */
 th {
     background-color: var(--light-aqua);
 }
 
 
-/* Styles the navigation area */
+/* ==========================================================
+    8. NAVIGATION
+   ========================================================== */
+
+/* Styles the navigation bar and positions its links */
 nav {
     background-color: var(--white);
     padding: 15px;
@@ -248,7 +287,6 @@ nav {
     justify-content: space-evenly;
 }
 
-
 /* Styles the navigation links */
 nav a {
     color: var(--bright-ocean-blue);;
@@ -256,23 +294,17 @@ nav a {
     font-family: Arial, sans-serif;
 }
 
-
-/* Changes link appearance when mouse is over it */
+/* Underlines navigation links when the mouse hovers over them */
 nav a:hover {
     text-decoration: underline;
 }
 
 
-/* Styles the two-column grid layout on the home page
-    to separate the paragraphs and images side by side */
-.grid-2col {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    align-items: center;
-}
+/* ==========================================================
+    9. DARK MODE TOGGLE BUTTON
+   ========================================================== */
 
-/* Styles the theme button using the current theme colors */
+/* Styles the theme toggle using the currently selected theme colors */
 #theme-toggler {
     background-color: var(--white);
     color: var(--dark-slate);
