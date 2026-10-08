@@ -27,10 +27,24 @@ Water-Inspired Color Palette
     --bright-ocean-blue:#0077B6;
 }
 
+/* Overrides the color variables when dark mode is enabled */
+body.dark_mode {
+    --ice-age:            #0F172A;
+    --white:              #1E293B;
+    --deep-ocean:         #BAE6FD;
+    --dark-slate:         #E2E8F0;
+    --mist-blue:          #475569;
+    --ocean-blue:         #93C5FD;
+    --teal:               #5EEAD4;
+    --sea-green:          #86EFAC;
+    --light-aqua:         #164E63;
+    --bright-ocean-blue:  #7DD3FC;
+}
+
 
 /* Styles the entire page */
 body {
-    background: linear-gradient(to bottom, #F0F8FF80, #0077B680), url("Images/Water.png");
+    background-color: var(--ice-age);
     margin: 30px;
     font-family: Arial, sans-serif;
     color: var(--dark-slate);
@@ -256,4 +270,15 @@ nav a:hover {
     grid-template-columns: 1fr 1fr;
     gap: 20px;
     align-items: center;
+}
+
+/* Styles the theme button using the current theme colors */
+#theme-toggler {
+    background-color: var(--white);
+    color: var(--dark-slate);
+    border: 1px solid var(--mist-blue);
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin-top: 15px;
+    cursor: pointer;
 }
